@@ -1,0 +1,34 @@
+.product__card {
+    .product__image {
+        width: 232px;
+        height: 309px;
+        border: 1px solid black;
+        position: relative;
+
+        button {
+            position: absolute;
+            right: 0;
+            top: 15px;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            background-color: transparent;
+            color: #0000008b;
+        }
+
+        img {
+            transition: .2s all ease;
+            width: 200px;
+            height: 270px;
+            object-fit: cover;
+            margin: 15px;
+        }
+    }
+}
+
+.product__image:hover {
+    img {
+        transition: .2s all ease;
+        transform: scale(1.1);
+    }
+}
