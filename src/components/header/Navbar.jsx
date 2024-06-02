@@ -92,15 +92,14 @@ const Navbar = () => {
           </div>
           <div className="navbar__responsive__links">
             <li>
-              <BsPerson /> Kirish
+              <BsPerson />
             </li>
             <li>
-              <FaRegHeart /> Saralanganlar
+              <FaRegHeart />
             </li>
             <li>
               {" "}
               <GrShop />
-              Savat
             </li>
           </div>
         </div>

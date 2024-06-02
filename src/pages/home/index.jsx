@@ -27,13 +27,13 @@ const Home = () => {
       <br />
       <br />
       <br />
-      <Products data={data.slice(0, 15)} />
+      <Products title="Mashhur" data={data.slice(0, 15)} />
       <Banners bannerId={1} />
-      <Products data={data.slice(15, 45)} />
+      <Products title="Yozgi savdo" data={data.slice(15, 45)} />
       <Banners bannerId={2} />
-      <Products data={data.slice(45, 60)} />
+      <Products title="Top 100" data={data.slice(45, 60)} />
       <Banners bannerId={3} />
-      <Products data={data.slice(60, 90)} />
+      <Products title="Appledan Texnika" data={data.slice(60, 90)} />
       <Banners bannerId={4} />
       <Products data={data.slice(90, 105)} />
       <Banners bannerId={4} />

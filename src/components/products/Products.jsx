@@ -3,7 +3,7 @@ import { FaRegHeart, FaHeart } from "react-icons/fa6";
 import { MdOutlineStar } from "react-icons/md";
 import { GrShop } from "react-icons/gr";
 import icon from "../../assets/images/cart-icon.png";
-const Products = ({ data }) => {
+const Products = ({ data, title }) => {
   let products = data?.map((el) => (
     <div key={el.id} className="product__card">
       <div className="product__image">
@@ -37,6 +37,7 @@ const Products = ({ data }) => {
   return (
     <section>
       <div className="container">
+        <h1>{title}</h1>
         <div className="products">{products}</div>
       </div>
     </section>
