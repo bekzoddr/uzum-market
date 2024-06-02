@@ -4,12 +4,17 @@ import logo from "../../assets/images/nav-logo.png";
 import { GrShop } from "react-icons/gr";
 import { BsPerson, BsSearch } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa6";
+import { IoSearch } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
 import { CiBoxList } from "react-icons/ci";
 import icon1 from "../../assets/images/icon4.png";
 import icon2 from "../../assets/images/icon3.png";
 import icon3 from "../../assets/images/icon2.png";
 import icon4 from "../../assets/images/icon1.png";
+import { useTranslation } from "react-i18next";
+
 const Navbar = () => {
+  const { t } = useTranslation();
   return (
     <>
       <header>
@@ -21,13 +26,10 @@ const Navbar = () => {
             </div>
             <div className="navigations">
               <button className="category">
-                <CiBoxList className="icon" /> Katalog
+                <CiBoxList className="icon" /> {t("category")}
               </button>
               <div className="navbar__search">
-                <input
-                  placeholder="Mahsulotlar va turkumlar izlash"
-                  type="search"
-                />
+                <input placeholder={t("search_placeholder")} type="search" />
                 <button>
                   <BsSearch />
                 </button>
@@ -35,15 +37,13 @@ const Navbar = () => {
             </div>
             <ul className="nav__collection">
               <li className="nav__link">
-                <BsPerson /> Kirish
+                <BsPerson /> {t("login")}
               </li>
               <li className="nav__link">
-                <FaRegHeart /> Saralanganlar
+                <FaRegHeart /> {t("favorites")}
               </li>
               <li className="nav__link">
-                {" "}
-                <GrShop />
-                Savat
+                <GrShop /> {t("cart")}
               </li>
             </ul>
           </div>
@@ -51,29 +51,28 @@ const Navbar = () => {
             <ul className="nav__categories">
               <li>
                 <img src={icon1} alt="" />
-                Muddatli to'lov
+                {t("installment_payment")}
               </li>
               <li>
                 <img src={icon2} alt="" />
-                Yozgi savdo
+                {t("summer_sale")}
               </li>
               <li>
                 <img src={icon3} alt="" />
-                Uyda salqinlik
+                {t("cool_home")}
               </li>
               <li>
                 <img src={icon4} alt="" />
-                Hovuzlar
+                {t("pools")}
               </li>
-
               <div className="gray">
-                <li>Elektronika</li>
-                <li>Maishiy texnika</li>
-                <li>Kiyim</li>
-                <li>Poyabzallar</li>
-                <li>Aksessuarlar</li>
-                <li>Go'zallik va parvarish</li>
-                <li>Yana </li>
+                <li>{t("electronics")}</li>
+                <li>{t("household_appliances")}</li>
+                <li>{t("clothing")}</li>
+                <li>{t("footwear")}</li>
+                <li>{t("accessories")}</li>
+                <li>{t("beauty_and_care")}</li>
+                <li>{t("more")}</li>
               </div>
             </ul>
           </div>
@@ -82,24 +81,31 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar__responsive">
           <div className="search">
-            <input
-              placeholder="Mahsulotlar va turkumlar izlash"
-              type="search"
-            />
+            <input placeholder={t("search_placeholder")} type="search" />
             <button>
               <BsSearch />
             </button>
           </div>
           <div className="navbar__responsive__links">
             <li>
-              <BsPerson />
+              <FaHome className="nav__icon" />
+              {t("home")}
             </li>
             <li>
-              <FaRegHeart />
+              <IoSearch className="nav__icon" />
+              {t("category")}
             </li>
             <li>
-              {" "}
-              <GrShop />
+              <GrShop className="nav__icon" />
+              {t("cart")}
+            </li>
+            <li>
+              <FaRegHeart className="nav__icon" />
+              {t("favorites")}
+            </li>
+            <li>
+              <BsPerson className="nav__icon" />
+              {t("profile")}
             </li>
           </div>
         </div>

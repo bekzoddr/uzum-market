@@ -2,6 +2,7 @@ import React from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa6";
 import { MdOutlineStar } from "react-icons/md";
 import { GrShop } from "react-icons/gr";
+import { MdArrowForwardIos } from "react-icons/md";
 import icon from "../../assets/images/cart-icon.png";
 const Products = ({ data, title }) => {
   let products = data?.map((el) => (
@@ -37,7 +38,10 @@ const Products = ({ data, title }) => {
   return (
     <section>
       <div className="container">
-        <h1>{title}</h1>
+        <h1 className="product__title">
+          {title} <MdArrowForwardIos />
+        </h1>
+        <br />
         <div className="products">{products}</div>
       </div>
     </section>

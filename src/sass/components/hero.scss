@@ -104,28 +104,28 @@
 
 @media (max-width: 768px) {
     .banners img {
-        width: 85%;
+        width: 600px;
         height: auto;
     }
 }
 
 @media (max-width: 600px) {
     .banners img {
-        width: 80%;
+        width: 500px;
         height: auto;
     }
 }
 
 @media (max-width: 480px) {
     .banners img {
-        width: 75%;
+        width: 400px !important;
         height: auto;
     }
 }
 
 @media (max-width: 360px) {
     .banners img {
-        width: 70%;
+        width: 300px !important;
         height: auto;
     }
 }
@@ -209,7 +209,7 @@
 
 @media (max-width: 480px) {
     .swiper-slide img {
-        width: 70%;
+        width: 450px;
         height: auto;
     }
 
@@ -218,6 +218,7 @@
         font-size: 10px;
         width: 16px;
         height: 16px;
+        display: none;
     }
 }
 
