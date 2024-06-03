@@ -51,10 +51,10 @@ const SubHeader = () => {
             <p>{t("my_orders")}</p>
             <button
               className="language"
-              onClick={() => i18n.changeLanguage("uz")}
+              onClick={() => i18n.changeLanguage("en")}
             >
-              {/* <div className="flag"> */}
-              {/* <div
+              {/* <div className="flag">
+                <div
                   className="flag__stripe"
                   style={{ backgroundColor: currentFlag[0] }}
                 ></div>
@@ -74,9 +74,8 @@ const SubHeader = () => {
                   className="flag__stripe"
                   style={{ backgroundColor: currentFlag[4] }}
                 ></div>
-              </div>
-              {t("language")} */}
-              uzb
+              </div> */}
+              {t("language")}
             </button>
           </div>
         </div>

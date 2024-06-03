@@ -26,7 +26,8 @@ const Navbar = () => {
             </div>
             <div className="navigations">
               <button className="category">
-                <CiBoxList className="icon" /> {t("category")}
+                <CiBoxList className="icon" style={{ fontSize: 25 }} />{" "}
+                {t("category")}
               </button>
               <div className="navbar__search">
                 <input placeholder={t("search_placeholder")} type="search" />
